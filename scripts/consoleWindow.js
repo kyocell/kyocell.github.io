@@ -53,28 +53,37 @@ function loadingSpinnerTimeout() {
     }, 13000);
 }
 
-
 function controlFlow(keyEvent) {
     if (keyEvent.key == "Enter") {
         if (document.querySelector('.'+consoleUserInput.classList[0]).value.toLowerCase() == "help") {
-            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].helpResponse)
+            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].helpResponse);
+
         } else if (document.querySelector('.'+consoleUserInput.classList[0]).value.toLowerCase() == "about") {
-            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].aboutResponse)
+            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].aboutResponse);
+
         } else if (document.querySelector('.'+consoleUserInput.classList[0]).value.toLowerCase() == "clear") {
             clearTerminal();
+
         } else if (document.querySelector('.'+consoleUserInput.classList[0]).value.toLowerCase() == "ls") {
-            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].lsResponse)
+            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].lsResponse);
+
         } else if (document.querySelector('.'+consoleUserInput.classList[0]).value.toLowerCase().includes("cd")) {
-            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].cdResponse)
+            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].cdResponse);
+
         } else if (document.querySelector('.'+consoleUserInput.classList[0]).value.toLowerCase() == "projects") {
-            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].projectsResponse)
+            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].projectsResponse);
+
         } else if (document.querySelector('.'+consoleUserInput.classList[0]).value.toLowerCase() == "contact") {
-            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].contactResponse)
+            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.responseObj[0].contactResponse);
+
         } else if (document.querySelector('.'+consoleUserInput.classList[0]).value.toLowerCase() == "exit") {
             consoleMinimizeBackgroundInitializer();
             clearTerminal();
+
+        } else if (document.querySelector('.'+consoleUserInput.classList[0]).value.toLowerCase() == "") {
+
         } else {
-            animatedTextGen(consoleUserInput, consoleCommand='', allCommands.invalidCommandResponse[0]);
+            
         }
     }
 }
@@ -95,7 +104,7 @@ function consoleResponseFieldGen(responseContent) {
         speed: 5,
         html: true,
         cursor: false,
-        afterStep: async function() {
+        afterStep: function() {
             terminalAutoScroll.scrollTo(0, terminalAutoScroll.scrollHeight);
         },
         afterComplete: function() {
@@ -104,7 +113,7 @@ function consoleResponseFieldGen(responseContent) {
             consoleTakeCommandFieldGen();
             consoleUserInput = document.querySelector('.console-input-'+fieldNumber);
             consoleUserInput.addEventListener('keypress', (event) => {
-            controlFlow(event)
+                controlFlow(event)
             }) 
         }
     }).go();
