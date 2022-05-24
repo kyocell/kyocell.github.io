@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+
+    <!--Local CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!--Bootstrap Import-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <title>Kyocell - Portfolio & about me</title>
+</head>
+<body>
+    <!--Loading Spinner-->
+    <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+    </div>
+    <!--Loading Spinner End-->
+
+    <!--Preloading Animation Window-->
+    <div class="preload-window-container">
+        <div class="preload-window">
+            <div class="mainDiv">
+                <div class="progressDiv">
+                  <div class="progress">
+
+                  </div>
+                </div><br><br>
+                <h2 style="font-style: courier, monospace;">0%</h2>
+                <div class="dependencies-loader overflow-auto" style="font-style: courier, monospace;">
+                    <b class="dependencies-loader-container"></b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Preloading Animation Window End-->
+
+    <!--Console Window-->
+    <div class="console">
+        <div class="console-container">
+            <div class="console-top-bar rounded-top">
+                <div class="console-top-bar-content">
+                    <div class="console-heading text-light">kyocell@port: ~</div>
+                    <button type="button" class="console-btn close-btn bg-danger rounded-circle"><i class="bi bi-x"></i></button>
+                    <button class="console-btn maximize-btn bg-success rounded-circle"><i class="bi bi-arrows-angle-expand"></i></button>
+                    <button class="console-btn minimize-btn bg-warning rounded-circle"><i class="bi bi-dash"></i></button>
+                </div>
+            </div>
+            <div class="console-output-container text-light" style="font-family: courier, monospace;">
+                <div class="console-output-content-container text-light" style="font-family: courier, monospace;">
+                    <div class="onload-information"><span>Welcome to ShellFolio v0.15</span><br><span>Type "help" to see available commands.</span></div>
+                    <span class="console-input-prefix"><span style="color: red">kyocell@port</span>:<span style="color: cyan">~</span><b>$</b></span><input type="text" class="console-input-0 console-input text-light" autofocus="autofocus"><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Console Window End-->
+
+    <!--Background Animated Information (on minimizing terminal)-->
+    <div class="background-information-container" style="font-style: 'Courier', monospace">
+        <b class="background-information-heading"></b><br>
+        <div class="background-information-animated">
+            <b class="background-information-content"></b>
+        </div>
+    </div>
+    <!--Background Animated Information (on minimizing terminal) End-->
+
+    <!--Minimized Window Box-->
+    <div class="minimized-window-container">
+        <div class="minimized-window">
+            kyocell@portfolio
+            <span><button class="console-btn maximize-btn bg-success rounded-circle"><i class="bi bi-arrows-angle-expand"></i></button></span>
+        </div>
+    </div>
+    <!--Minimized Window Box End-->
+
+    <!--Scripts-->
+    <script type="text/javascript" src="scripts/consoleWindow.js"></script>
+    <script type="text/javascript" src="scripts/preLoadAnimation.js"></script>
+    <script src="https://unpkg.com/typeit@8.5.4/dist/index.umd.js"></script>
+    <!--Scripts End-->
+
+</body>
+</html>
